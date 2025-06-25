@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>No Hate Canada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js"></script>
+    <style>
+      body {
+        background: linear-gradient(135deg, #1A1A1A 0%, #000000 100%);
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+
+      header {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #2A2A2A 0%, #000000 100%);
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      h1 {
+        font-size: 64px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInDown 1s ease-out;
+      }
+
+      h1 span {
+        color: #FF5555;
+      }
+
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+        color: #FF7777;
+        text-shadow: 0 0 10px rgba(255, 119, 119, 0.5);
+      }
+
+      p {
+        font-size: 18px;
+        text-transform: uppercase;
+        max-width: 800px;
+        margin: 0 auto 20px;
+        opacity: 0.9;
+      }
+
+      .section {
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .initiatives-grid {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 20px;
+      }
+
+      .initiative {
+        background: linear-gradient(135deg, #2A2F32 0%, #1C2526 100%);
+        padding: 25px;
+        width: 320px;
+        text-align: left;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .initiative:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+      }
+
+      .initiative h3 {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #FF8888;
+      }
+
+      .initiative p {
+        font-size: 15px;
+        text-transform: none;
+        margin: 15px 0;
+        color: #D3D3D3;
+      }
+
+      .initiative button {
+        background: linear-gradient(90deg, #FF3333 0%, #FF6666 100%);
+        color: #FFFFFF;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .initiative button:hover {
+        background: linear-gradient(90deg, #FF6666 0%, #FF3333 100%);
+        transform: scale(1.05);
+      }
+
+      .impact-events {
+        padding: 60px 20px;
+        overflow: hidden;
+      }
+
+      .impact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .impact-card {
+        background: rgba(28, 37, 38, 0.8);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .impact-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .impact-card:hover {
+        background: rgba(28, 37, 38, 1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        transform: translateY(-5px);
+      }
+
+      .impact-card h3 {
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #FF8888;
+        margin-bottom: 10px;
+      }
+
+      .impact-card p {
+        font-size: 16px;
+        text-transform: none;
+        color: #E0E0E0;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .get-involved button {
+        background: linear-gradient(135deg, #FF4444 0%, #AA0000 100%);
+        color: #FFFFFF;
+        padding: 18px 40px;
+        border: none;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+      }
+
+      .get-involved button:hover {
+        background: linear-gradient(135deg, #AA0000 0%, #FF4444 100%);
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .impact-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .initiatives-grid {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .initiative {
+          width: 90%;
+        }
+
+        .impact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 48px;
+        }
+
+        h2 {
+          font-size: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header__logo">
+        <img src="logo4.png" alt="No Hate Canada Logo">
+      </div>
+      <nav class="navbar">
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">
+              <i data-feather="home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="getinvolved.html" class="navbar__link">
+              <i data-feather="home"></i>
+              <span>Get Involved</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="initiatives.html" class="navbar__link">
+              <i data-feather="folder"></i>
+              <span>Initiatives</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="resources.html" class="navbar__link">
+              <i data-feather="archive"></i>
+              <span>Resources</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">
+              <i data-feather="help-circle"></i>
+              <span>Contact Us</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">
+              <i data-feather="settings"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Page content can be added here -->
+    <script src="script.js"></script>
+    <header>
+      <h1>INITIATIVES <span>.</span>
+      </h1>
+    </header>
+    <section class="section">
+      <h2>OUR INITIATIVES</h2>
+      <div class="initiatives-grid">
+        <div class="initiative">
+          <h3>SCHOOL OUTREACH PROGRAM</h3>
+          <p>Equipping youth with tools to stand against hate in schools</p>
+          <button onclick="alert('Learn more about School Outreach Program')"><a href="contact.html">LEARN MORE</a></button>
+        </div>
+        <div class="initiative">
+          <h3>COMMUNITY ALLY NETWORK</h3>
+          <p>Empowering local leaders to create safer spaces</p>
+          <button onclick="alert('Join the Community Ally Network')"><a href="contact.html">JOIN NOW</a></button>
+        </div>
+        <div class="initiative">
+          <h3>ONLINE HATE WATCH</h3>
+          <p>Monitoring and exposing digital hate campaigns in Canada</p>
+          <button onclick="alert('View Online Hate Watch reports')"><a href="resources.html">VIEW REPORTS</a></button>
+        </div>
+      </div>
+    </section>
+    <section class="impact-events">
+      <h2>IMPACT EVENTS</h2>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <h3>Youth Anti-Hate Rally</h3>
+          <p>Join us on July 15, 2025, at 10:00 AM PDT in Toronto for a rally led by students from the School Outreach Program to promote inclusion.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Community Safety Workshop</h3>
+          <p>Attend our workshop on August 5, 2025, at 6:00 PM PDT in British Columbia, hosted by the Community Ally Network to build safer spaces.</p>
+        </div>
+        <div class="impact-card">
+          <h3>Online Hate Awareness Day</h3>
+          <p>Mark your calendar for September 10, 2025, at 1:00 PM PDT for a virtual event by Online Hate Watch to educate on digital hate campaigns.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const impactCards = document.querySelectorAll('.impact-card');
+        impactCards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, index * 300); // Staggered animation
+        });
+      });
+    </script>
+    <script src='https://unpkg.com/feather-icons'></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+ <footer>
+        <h2>SILENCE IS COMPLICITY. WE CHOOSE ACTION<span>.</span></h2>
+        <div class="buttons">
+            <button class="become-partner" href="getinvolved.html"><a href="getinvolved.html">BECOME A PARTNER</a></button>
+            <button class="donate-now" href="contact.html"><a href="contact.html">DONATE NOW</a></button>
+        </div>
+    </footer>
+</html>

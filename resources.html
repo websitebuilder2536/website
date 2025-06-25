@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>No Hate Canada</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://public.codepenassets.com/css/reset-2.0.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://public.codepenassets.com/js/prefixfree-1.0.7.min.js"></script>
+  </head>
+  <style>
+    body {
+      background-color: #111;
+      color: #E0E0E0;
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .resources-container {
+      max-width: 1200px;
+      margin: 60px auto 40px;
+      padding: 20px;
+    }
+
+    .resources-title {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #FF3333;
+      text-transform: uppercase;
+    }
+
+    .resources-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .resource-item {
+      background: #1C2526;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .resource-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .resource-item h2 {
+      margin: 0 0 15px;
+      color: #FF6666;
+      font-size: 1.5em;
+    }
+
+    .resource-item p {
+      margin-bottom: 20px;
+      font-size: 1em;
+      color: #CCCCCC;
+    }
+
+    .resource-link {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #333;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .resource-link:hover {
+      background: #555;
+    }
+
+    .resource-link:focus {
+      outline: 2px solid #FF3333;
+      outline-offset: 2px;
+    }
+
+    footer {
+      background: #1C2526;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer h2 {
+      font-size: 1.8em;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    footer h2 span {
+      color: #FF3333;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .buttons button {
+      padding: 12px 25px;
+      border-radius: 25px;
+      border: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .become-partner {
+      background: #FFFFFF;
+      color: #000000;
+    }
+
+    .become-partner:hover {
+      background: #D3D3D3;
+      transform: scale(1.05);
+    }
+
+    .donate-now {
+      background: #FF3333;
+      color: #FFFFFF;
+    }
+
+    .donate-now:hover {
+      background: #E60000;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .resources-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="header__logo">
+        <img src="logo4.png" alt="No Hate Canada Logo">
+      </div>
+      <nav class="navbar">
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="index.html" class="navbar__link">
+              <i data-feather="home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="getinvolved.html" class="navbar__link">
+              <i data-feather="home"></i>
+              <span>Get Involved</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="initiatives.html" class="navbar__link">
+              <i data-feather="folder"></i>
+              <span>Initiatives</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="resources.html" class="navbar__link">
+              <i data-feather="archive"></i>
+              <span>Resources</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="contact.html" class="navbar__link">
+              <i data-feather="help-circle"></i>
+              <span>Contact Us</span>
+            </a>
+          </li>
+          <li class="navbar__item">
+            <a href="about.html" class="navbar__link">
+              <i data-feather="settings"></i>
+              <span>About Us</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- Page content can be added here -->
+    <div class="resources-container">
+      <h1 class="resources-title">Resources</h1>
+      <section class="resources-list">
+        <div class="resource-item">
+          <h2>Know Your Rights</h2>
+          <p>Learn about your legal rights against hate crimes and discrimination.</p>
+          <a href="https://www.canada.ca/en/canadian-heritage/campaigns/fight-hate.html" class="resource-link" target="_blank" rel="noopener">Canada's Action Plan on Combatting Hate</a>
+        </div>
+        <div class="resource-item">
+          <h2>Workshops & Training</h2>
+          <p>Access training to recognize and combat hate in educational settings.</p>
+          <a href="https://www.antihate.ca/confronting-and-preventing-hate-in-canadian-schools" class="resource-link" target="_blank" rel="noopener">Anti-Hate Toolkit for Schools</a>
+        </div>
+        <div class="resource-item">
+          <h2>Printable Posters</h2>
+          <p>Download materials to raise awareness in your community.</p>
+          <a href="https://www.combatonlinehate.ca/resources" class="resource-link" target="_blank" rel="noopener">Combat Online Hate Resources</a>
+        </div>
+        <div class="resource-item">
+          <h2>Mental Health Support</h2>
+          <p>Find support services for those affected by hate incidents.</p>
+          <a href="https://www.canada.ca/en/public-health/services/mental-health-services/mental-health-support.html" class="resource-link" target="_blank" rel="noopener">Public Health Mental Health Support</a>
+        </div>
+        <div class="resource-item">
+          <h2>Anti-Hate Reporting</h2>
+          <p>Report hate incidents and get support from a national hotline.</p>
+          <a href="https://www.bnaibrith.ca/anti-hate-hotline" class="resource-link" target="_blank" rel="noopener">B'nai Brith Anti-Hate Hotline</a>
+        </div>
+        <div class="resource-item">
+          <h2>Online Hate Prevention</h2>
+          <p>Resources to address and prevent online hate targeting marginalized groups.</p>
+          <a href="https://www.ywcacanada.ca/en/blockhate" class="resource-link" target="_blank" rel="noopener">YWCA Canada #BlockHate</a>
+        </div>
+        <div class="resource-item">
+          <h2>Community Safety</h2>
+          <p>Learn about initiatives to combat hate crimes in Alberta communities.</p>
+          <a href="https://stophateab.ca/" class="resource-link" target="_blank" rel="noopener">StopHateAB</a>
+        </div>
+        <div class="resource-item">
+          <h2>Anti-Racism Education</h2>
+          <p>Explore programs to educate and combat racism across Canada.</p>
+          <a href="https://www.canada.ca/en/canadian-heritage/campaigns/anti-racism-engagement.html" class="resource-link" target="_blank" rel="noopener">Canada Anti-Racism Strategy</a>
+        </div>
+        <div class="resource-item">
+          <h2>Race Relations Support</h2>
+          <p>Resources to promote racial harmony and combat discrimination.</p>
+          <a href="https://www.crrf-fcrr.ca/" class="resource-link" target="_blank" rel="noopener">Canadian Race Relations Foundation</a>
+        </div>
+        <div class="resource-item">
+          <h2>US Anti-Hate Resources</h2>
+          <p>Learn about combating hate crimes and extremism in the United States.</p>
+          <a href="https://www.adl.org/" class="resource-link" target="_blank" rel="noopener">Anti-Defamation League</a>
+        </div>
+        <div class="resource-item">
+          <h2>Extremism Monitoring</h2>
+          <p>Track hate groups and extremist activities across the USA.</p>
+          <a href="https://www.splcenter.org/" class="resource-link" target="_blank" rel="noopener">Southern Poverty Law Center</a>
+        </div>
+        <div class="resource-item">
+          <h2>Hate Crime Data</h2>
+          <p>Access official data and resources on hate crimes in the USA.</p>
+          <a href="https://www.justice.gov/hatecrimes" class="resource-link" target="_blank" rel="noopener">US Department of Justice Hate Crimes</a>
+        </div>
+        <div class="resource-item">
+          <h2>Community Action</h2>
+          <p>Find tools and support for community-led anti-hate efforts in the USA.</p>
+          <a href="https://www.naacp.org/" class="resource-link" target="_blank" rel="noopener">NAACP</a>
+        </div>
+        <div class="resource-item">
+          <h2>Online Safety</h2>
+          <p>Resources to promote safety and combat online hate in the USA.</p>
+          <a href="https://www.connectsafely.org/" class="resource-link" target="_blank" rel="noopener">ConnectSafely</a>
+        </div>
+        <div class="resource-item">
+          <h2>Urban Community Support</h2>
+          <p>Support for urban communities combating hate and inequality.</p>
+          <a href="https://www.nul.org/" class="resource-link" target="_blank" rel="noopener">National Urban League</a>
+        </div>
+        <div class="resource-item">
+          <h2>Anti-Bullying Resources</h2>
+          <p>Tools to prevent bullying and hate in schools and communities.</p>
+          <a href="https://www.stopbullying.gov/" class="resource-link" target="_blank" rel="noopener">StopBullying.gov</a>
+        </div>
+      </section>
+    </div>
+    <script src='https://unpkg.com/feather-icons'></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+   <footer>
+        <h2>SILENCE IS COMPLICITY. WE CHOOSE ACTION<span>.</span></h2>
+        <div class="buttons">
+            <button class="become-partner" href="getinvolved.html"><a href="getinvolved.html">BECOME A PARTNER</a></button>
+            <button class="donate-now" href="contact.html"><a href="contact.html">DONATE NOW</a></button>
+        </div>
+    </footer>
+</html>
